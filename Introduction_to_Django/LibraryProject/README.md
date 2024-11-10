@@ -1,3 +1,1 @@
-The Library Project Directory 
-Django lab
-Another update
+this is the LibrRY pROJECT 
