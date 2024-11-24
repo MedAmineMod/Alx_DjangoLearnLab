@@ -19,7 +19,7 @@ for book in library_object.books.all() :
 
 
 
-librarian_name_library = Librarian.objects.get(library = library_object.id).name
+librarian_name_library = Librarian.objects.get(library=library_object.id).name
 
 
 
