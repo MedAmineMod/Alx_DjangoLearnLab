@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include  
-from relationship_app import  views 
+from .views import list_books
+from .views import LibraryDetailView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path("books/" , include("bookshelf.urls")),
-    path('books/', views.book_list, name='book_list'),
-    path('library/<int:pk>', views.LibraryDetailView.as_view() ,  name='library_details' ),
+    path('books/', list_books, name='book_list'),
+    path('library/<int:pk>', LibraryDetailView.as_view() ,  name='library_details' ),
 ]
