@@ -2,9 +2,9 @@ from relationship_app.models import Book, Author, Librarian ,Library
 
 author_name = "amine"
 
-author_object =  Author.objects.get(name=author_name)
+author =  Author.objects.get(name=author_name)
 
-books = Book.objects.filter(author = author_object.pk)
+books = Book.objects.filter(author=author)
 
 for book in books :
     print(book.name , book.id)
