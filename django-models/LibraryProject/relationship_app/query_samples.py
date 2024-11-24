@@ -12,9 +12,9 @@ for book in books :
 
 library_name = "Ohod"
 
-library_object = Library.objects.get(name = library_name)
+library_object = Library.objects.get(name=library_name)
 
-for book in library_object.books :
+for book in library_object.books.all() :
     print(book.name , book.id)
 
 
