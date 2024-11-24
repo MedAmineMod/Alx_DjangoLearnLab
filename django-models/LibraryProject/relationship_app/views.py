@@ -7,7 +7,7 @@ from django.views.generic.detail import DetailView
 
 
 
-def book_list(request):
+def list_books(request):
     books = Book.objects.all()  # Fetch all book instances from the database
     context = {'books': books}  # Create a context dictionary with book list
     return render(request, 'relationship_app/list_books.html', context)
