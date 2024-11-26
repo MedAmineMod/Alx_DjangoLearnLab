@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path , include  
 from .views import list_books
 from .views import LibraryDetailView
+from .views import SignUpView
+from django.contrib.auth.views import LoginView
 
 
 urlpatterns = [
@@ -25,4 +27,7 @@ urlpatterns = [
     # path("books/" , include("bookshelf.urls")),
     path('books/', list_books, name='book_list'),
     path('library/<int:pk>', LibraryDetailView.as_view() ,  name='library_details' ),
+    path('register/' , SignUpView.as_view() , name="register"),
+    path('login/' , LoginView.as_view(template_name='relationship_app/login.html') , name="login")
+
 ]
