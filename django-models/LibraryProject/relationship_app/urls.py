@@ -28,7 +28,7 @@ urlpatterns = [
     path('books/', views.list_books, name='book_list'),
     path('library/<int:pk>', views.LibraryDetailView.as_view() ,  name='library_details' ),
     path('register/' , views.register   , name="register"), 
-    path('login/' ,  views.login , name="login"),
-    path("logout/" ,  views.logout , name="logout")
+    path('login/' , LoginView.as_view(template_name='relationship_app/login.html') , name="login"),
+    path("logout/" , LogoutView.as_view(template_name="relationship_app/logout.html") , name="logout")
 
 ]

@@ -39,19 +39,19 @@ def register(request):
     return render(request, template_name, {'form': form_class})
 
 
-def login(request):
+# def login(request):
 
-    form_class = AuthenticationForm()
-    # success_url = reverse_lazy("login")
-    template_name = "relationship_app/login.html"
-    return render(request, template_name, {'form': form_class})
+#     form_class = AuthenticationForm()
+#     # success_url = reverse_lazy("login")
+#     template_name = "relationship_app/login.html"
+#     return render(request, template_name, {'form': form_class})
 
 
 
-def logout(request):
+# def logout(request):
 
     
-    # success_url = reverse_lazy("login")
-    template_name = "relationship_app/logout.html"
-    return render(request, template_name )
+#     # success_url = reverse_lazy("login")
+#     template_name = "relationship_app/logout.html"
+#     return render(request, template_name )
 
